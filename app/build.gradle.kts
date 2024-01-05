@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0-Beta2"
 }
 
 android {
@@ -66,4 +67,14 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // Ktor
+    implementation("io.ktor:ktor-client-core:1.6.3")
+    implementation("io.ktor:ktor-client-android:1.6.3")
+    implementation("io.ktor:ktor-client-serialization:1.6.3")
+    implementation("io.ktor:ktor-client-logging:1.6.3")
+    implementation("ch.qos.logback:logback-classic:1.2.3")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+
 }
